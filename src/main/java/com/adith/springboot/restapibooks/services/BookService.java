@@ -61,4 +61,8 @@ public class BookService {
        book.setId(id);
        bookRepository.save(book);
     }
+
+    public void deleteAllBooks(){
+        bookRepository.deleteAll();
+    }
 }
