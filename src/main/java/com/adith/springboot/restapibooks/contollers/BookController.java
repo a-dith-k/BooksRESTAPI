@@ -52,7 +52,7 @@ public class BookController {
         try {
             this.bookservice.addBook(book);
 
-            return ResponseEntity.status(HttpStatus.CREATED).build();
+            return ResponseEntity.status(HttpStatus.CREATED).body(bookservice.getBookByName(book));
         }catch (Exception e){
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();

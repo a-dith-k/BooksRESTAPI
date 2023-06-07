@@ -65,4 +65,8 @@ public class BookService {
     public void deleteAllBooks(){
         bookRepository.deleteAll();
     }
+
+    public Book getBookByName(Book book) {
+        return bookRepository.findBookByTitle(book.getTitle());
+    }
 }
